@@ -66,3 +66,5 @@ gem 'activeadmin'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
+gem 'active_admin_flat_skin'
+gem "font-awesome-rails"
