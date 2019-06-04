@@ -18,7 +18,7 @@ ActiveAdmin.register UserAuth do
             image_tag obj.id_card_url.present? ? obj.id_card_url : '/' ,class: "thumb",style: "height: 12em; max-width:30em; width:auto"
         end
         column "실물 사진" do |obj|
-            image_tag obj.id_card_url.present? ? obj.id_card_url : '/' ,class: "thumb",style: "height: 12em; max-width:30em; width:auto"
+            image_tag obj.face_image_url.present? ? obj.face_image_url : '/' ,class: "thumb",style: "height: 12em; max-width:30em; width:auto"
         end
         column :created_at
     
