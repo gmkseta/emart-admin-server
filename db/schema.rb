@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_17_071401) do
+ActiveRecord::Schema.define(version: 2019_06_17_194328) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "namespace"
@@ -38,6 +38,26 @@ ActiveRecord::Schema.define(version: 2019_05_17_071401) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "devices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "number"
+    t.string "address"
+    t.string "address_detail"
+    t.float "latlng_x"
+    t.float "latlng_y"
+    t.string "zipcode"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_auths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "id_card"
+    t.string "face_image"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_auths_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "username"
@@ -47,4 +67,5 @@ ActiveRecord::Schema.define(version: 2019_05_17_071401) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "user_auths", "users"
 end

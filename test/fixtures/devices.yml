@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  devise_num: MyString
+  address: MyString
+  address_detail: MyString
+  latlng_x: 1.5
+  latlng_y: 1.5
+  zipcode: MyString
+
+two:
+  devise_num: MyString
+  address: MyString
+  address_detail: MyString
+  latlng_x: 1.5
+  latlng_y: 1.5
+  zipcode: MyString
