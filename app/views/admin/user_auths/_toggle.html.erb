@@ -1,0 +1,10 @@
+
+<%= link_to  toggle_admin_user_auth_path(id) ,data:{remote:true}, method: :post do %>
+  <% if auth=="auth" %>
+    <input type="checkbox" checked="true">
+    <span class="slider round"></span>
+  <% else %>
+    <input type="checkbox">
+    <span class="slider round"></span>
+  <% end %>
+<% end %>

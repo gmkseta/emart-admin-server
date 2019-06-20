@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
               length: { minimum: 6 },
               if: -> { new_record? || !password.nil? }
     has_many :user_auths
+
+    enum auth: [:unauth, :auth]
+
+
 end

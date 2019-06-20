@@ -1,0 +1,5 @@
+<% if @user.unauth? %>
+  $("#user_auth_<%= @user_auth.id %> .col-auth input").removeAttr("checked")
+<% else %>
+  $("#user_auth_<%= @user_auth.id %> .col-auth input").attr("checked",true)
+<% end %>
